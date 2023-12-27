@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "34551902434",
+    "project_id": "basic-todo-app-1aa10",
+    "storage_bucket": "basic-todo-app-1aa10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34551902434:android:f61fb377537d77c6ffeebb",
+        "android_client_info": {
+          "package_name": "com.example.firebasewiederholung"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1zcFXjuuJaO22fRXrExJ7DSHXQOXd4pk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

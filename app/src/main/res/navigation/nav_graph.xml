@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.firebasewiederholung.ui.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.firebasewiederholung.ui.WelcomeFragment"
+        android:label="WelcomeFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.firebasewiederholung.ui.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.firebasewiederholung.ui.HomeFragment"
+        android:label="HomeFragment" />
+</navigation>
