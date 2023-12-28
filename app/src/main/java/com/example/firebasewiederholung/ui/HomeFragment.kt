@@ -9,7 +9,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.firebasewiederholung.FirebaseViewModel
 import com.example.firebasewiederholung.R
+import com.example.firebasewiederholung.adapter.TodoAdapter
 import com.example.firebasewiederholung.databinding.FragmentHomeBinding
+import com.example.firebasewiederholung.model.TodoItem
+import com.google.firebase.firestore.toObject
 
 class HomeFragment: Fragment() {
 
@@ -27,6 +30,24 @@ class HomeFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.todolistRef.addSnapshotListener { value, error ->
+            if (error == null && value != null) {
+                val todoList = value.map { it.toObject(TodoItem::class.java) }
+                val todoListUnchecked = todoList.filter { !it.checked }
+                val todoListChecked = todoList.filter { it.checked }
+                binding.rvTodo.adapter = TodoAdapter(todoListUnchecked, viewModel)
+                binding.rvTodochecked.adapter = TodoAdapter(todoListChecked, viewModel)
+            }
+        }
+
+        binding.ibSavetodo.setOnClickListener {
+            val todoText = binding.etNewtodo.text.toString()
+            if(todoText != ""){
+                viewModel.saveTodo(TodoItem(text = todoText))
+                binding.etNewtodo.text.clear()
+            }
+        }
 
         binding.btLogout.setOnClickListener {
             viewModel.logout()

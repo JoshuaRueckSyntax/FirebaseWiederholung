@@ -3,5 +3,11 @@
     <style name="Base.Theme.FirebaseWiederholung" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/yellow_primary</item>
+        <item name="colorPrimaryDark">@color/yellow_dark_primary</item>
+        <item name="colorPrimaryVariant">@color/yellow_light_primary</item>
+        <item name="colorAccent">@color/yellow_accent</item>
+        <item name="colorTertiary">@color/yellow_dark_primary</item>
+        <item name="android:colorBackground">#FFFFFF</item>
     </style>
 </resources>

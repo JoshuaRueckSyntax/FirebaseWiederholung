@@ -9,6 +9,7 @@
         <item name="colorAccent">@color/yellow_accent</item>
         <item name="colorTertiary">@color/yellow_text</item>
         <item name="android:colorBackground">#FFFFFF</item>
+        <item name="cardBackgroundColor">@color/yellow_dark_primary</item>
     </style>
 
     <style name="Theme.FirebaseWiederholung" parent="Base.Theme.FirebaseWiederholung" />
