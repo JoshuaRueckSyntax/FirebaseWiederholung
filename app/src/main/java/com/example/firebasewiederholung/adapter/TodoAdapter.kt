@@ -1,9 +1,7 @@
 package com.example.firebasewiederholung.adapter
 
-import android.service.autofill.Dataset
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.getColor
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
@@ -41,6 +39,7 @@ class TodoAdapter(
                 viewModel.saveTodo(item)
                 viewModel.deleteTodo(item)
             }
+
         } else {
             holder.binding.tvIndex.text = "#" + (position+1)
             holder.binding.tvTitleTodo.text = item.text

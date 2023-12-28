@@ -39,7 +39,7 @@
     <EditText
         android:id="@+id/et_newtodo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:ems="10"

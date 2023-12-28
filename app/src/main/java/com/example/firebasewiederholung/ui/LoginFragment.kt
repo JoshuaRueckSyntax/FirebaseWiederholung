@@ -45,9 +45,17 @@ class LoginFragment: Fragment() {
                         binding.etEmailLog.text.clear()
                         binding.etPassLog.text.clear()
                         hidekeyboard(view)
-                        Toast.makeText(getActivity(),"Not verified or wrong e-mail/password.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),"Not verified or wrong e-mail/password.", Toast.LENGTH_SHORT).show()
                     }
                 }
+            }
+        }
+
+        binding.btResetpass.setOnClickListener {
+            val email = binding.etEmailLog.text.toString()
+            if(email != "") {
+                viewModel.sendPasswordReset(email)
+                Toast.makeText(getActivity(),"Password reset e-mail sent.", Toast.LENGTH_SHORT).show()
             }
         }
 

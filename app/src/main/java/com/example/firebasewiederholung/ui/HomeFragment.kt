@@ -12,7 +12,6 @@ import com.example.firebasewiederholung.R
 import com.example.firebasewiederholung.adapter.TodoAdapter
 import com.example.firebasewiederholung.databinding.FragmentHomeBinding
 import com.example.firebasewiederholung.model.TodoItem
-import com.google.firebase.firestore.toObject
 
 class HomeFragment: Fragment() {
 

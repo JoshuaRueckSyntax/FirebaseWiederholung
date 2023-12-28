@@ -14,7 +14,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.firebasewiederholung.FirebaseViewModel
 import com.example.firebasewiederholung.R
 import com.example.firebasewiederholung.databinding.FragmentRegisterBinding
-import java.lang.Exception
 
 class RegisterFragment: Fragment() {
 
@@ -45,7 +44,7 @@ class RegisterFragment: Fragment() {
                         binding.etEmailReg.text.clear()
                         binding.etPassReg.text.clear()
                         hidekeyboard(view)
-                        Toast.makeText(getActivity(),"Account creation failed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),"Account creation failed.", Toast.LENGTH_SHORT).show()
                     } else {
                         binding.tvSuccess.isVisible = true
                         hidekeyboard(view)

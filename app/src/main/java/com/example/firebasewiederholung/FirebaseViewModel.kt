@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import com.example.firebasewiederholung.model.TodoItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -51,7 +50,6 @@ class FirebaseViewModel: ViewModel() {
             }
         }
     }
-
 
     fun sendPasswordReset(email: String) {
         firebaseAuth.sendPasswordResetEmail(email)
