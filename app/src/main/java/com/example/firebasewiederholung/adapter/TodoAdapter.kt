@@ -29,23 +29,26 @@ class TodoAdapter(
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         val item = dataset[position]
 
+        holder.binding.cvTodo.setOnLongClickListener {
+            viewModel.deleteTodo(item)
+            true
+        }
+
         if(item.checked){
-            holder.binding.tvIndex.isVisible = false
             holder.binding.tvTitleTodo.text = item.text
             holder.binding.check.isChecked = true
             holder.binding.cvTodo.setCardBackgroundColor(getColor(holder.itemView.context, R.color.yellow_light_primary))
+            holder.binding.cvTodo.alpha = 0.5F
             holder.binding.check.setOnClickListener {
-                item.checked = false
-                viewModel.saveTodo(item)
+                viewModel.saveTodo(TodoItem(text = item.text, checked = false, timestamp = System.currentTimeMillis()))
                 viewModel.deleteTodo(item)
             }
 
         } else {
-            holder.binding.tvIndex.text = "#" + (position+1)
             holder.binding.tvTitleTodo.text = item.text
+            holder.binding.cvTodo.setCardBackgroundColor(getColor(holder.itemView.context, R.color.white))
             holder.binding.check.setOnClickListener {
-                item.checked = true
-                viewModel.saveTodo(item)
+                viewModel.saveTodo(TodoItem(text = item.text, checked = true,timestamp = System.currentTimeMillis()))
                 viewModel.deleteTodo(item)
             }
         }
