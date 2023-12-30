@@ -12,7 +12,6 @@ import com.example.firebasewiederholung.R
 import com.example.firebasewiederholung.adapter.TodoAdapter
 import com.example.firebasewiederholung.databinding.FragmentHomeBinding
 import com.example.firebasewiederholung.model.TodoItem
-import com.google.firebase.firestore.FieldValue
 
 class HomeFragment: Fragment() {
 
@@ -60,6 +59,10 @@ class HomeFragment: Fragment() {
             if (it == null) {
                 findNavController().navigate(R.id.loginFragment)
             }
+        }
+
+        binding.ibUser.setOnClickListener {
+            findNavController().navigate(R.id.userFragment)
         }
 
     }

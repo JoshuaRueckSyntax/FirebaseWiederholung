@@ -20,4 +20,8 @@
         android:id="@+id/homeFragment"
         android:name="com.example.firebasewiederholung.ui.HomeFragment"
         android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.firebasewiederholung.ui.UserFragment"
+        android:label="UserFragment" />
 </navigation>

@@ -3,7 +3,6 @@ package com.example.firebasewiederholung.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.getColor
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firebasewiederholung.FirebaseViewModel
 import com.example.firebasewiederholung.R
